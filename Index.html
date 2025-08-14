@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>আইডি রিকভারি আবেদন ফর্ম</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    form { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+    input, textarea, button { width: 100%; padding: 10px; margin: 8px 0; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: #28a745; color: white; border: none; cursor: pointer; }
+    button:hover { background: #218838; }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">আইডি রিকভারি আবেদন ফর্ম</h2>
+  <form id="hackForm">
+    <input type="text" name="name" placeholder="আপনার নাম" required>
+    <input type="text" name="phone" placeholder="মোবাইল নম্বর" required>
+    <input type="email" name="email" placeholder="আপনার ইমেইল" required>
+    <input type="text" name="facebook" placeholder="হ্যাক হওয়া ফেইসবুক আইডি লিংক" required>
+    <input type="text" name="gmail" placeholder="হ্যাক হওয়া জিমেইল" required>
+    <textarea name="details" placeholder="ঘটনার বিবরণ" required></textarea>
+    <button type="submit">আবেদন জমা দিন</button>
+  </form>
+
+  <script>
+    const scriptURL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL"; // এখানে তোমার ডিপ্লয় করা URL বসাও
+    const form = document.getElementById("hackForm");
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(() => {
+        alert("আপনার আবেদন জমা হয়েছে! আমরা শীঘ্রই যোগাযোগ করব।");
+        form.reset();
+      })
+      .catch(err => alert("সমস্যা হয়েছে, আবার চেষ্টা করুন!"));
+    });
+  </script>
+</body>
+</html>

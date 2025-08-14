@@ -1,76 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>যোগাযোগ ফর্ম</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 600px;
-            background: white;
-            margin: auto;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        p {
-            text-align: center;
-            color: #555;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        input, textarea {
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            margin-top: 15px;
-            padding: 10px;
-            background: #28a745;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #218838;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>হ্যাকড একাউন্ট রিকভারি আবেদন</title>
+  <style>
+    body{font-family: Arial, Helvetica, sans-serif; background:#f7f7f7; padding:20px; color:#111}
+    .card{max-width:720px;margin:20px auto;padding:20px;background:#fff;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    label{display:block;margin-top:12px;font-weight:600}
+    input,textarea,select{width:100%;padding:8px;margin-top:6px;border:1px solid #ddd;border-radius:4px}
+    button{margin-top:14px;padding:10px 14px;border:0;border-radius:6px;cursor:pointer;background:#1a73e8;color:#fff}
+    .note{font-size:13px;color:#666;margin-top:8px}
+    .small{font-size:13px;color:#444}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>আমাদের সাথে যোগাযোগ করুন</h1>
-        <p>আপনার নাম, ইমেইল এবং বার্তা লিখুন। আমরা যত দ্রুত সম্ভব আপনার সাথে যোগাযোগ করবো।</p>
-        <form action="https://formspree.io/f/mjkgdrkd" method="POST">
-            <label for="name">নাম</label>
-            <input type="text" id="name" name="name" required>
+  <div class="card">
+    <h2>হ্যাকড Facebook / Gmail রিকভারি - আবেদন</h2>
+    <p class="note">সঠিক তথ্য দিবে। আমরা কেবল অনুরোধকৃত অ্যাকাউন্টের প্রকৃত মালিকের হয়ে অফিসিয়াল রিকভারি প্রক্রিয়া চালাবো।</p>
 
-            <label for="email">ইমেইল</label>
-            <input type="email" id="email" name="_replyto" required>
+    <form id="recoverForm">
+      <label>পূর্ণ নাম <span class="small">(required)</span></label>
+      <input type="text" id="fullName" required />
 
-            <label for="message">বার্তা</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+      <label>মোবাইল নম্বর <span class="small">(required)</span></label>
+      <input type="tel" id="phone" required />
 
-            <button type="submit">পাঠান</button>
-        </form>
-    </div>
+      <label>আপনার সক্রিয় ইমেইল (আমরা এখানে আপডেট পাঠাবো) <span class="small">(required)</span></label>
+      <input type="email" id="contactEmail" required />
+
+      <label>হ্যাক হওয়া একাউন্টের ধরন <span class="small">(required)</span></label>
+      <select id="accountType" required>
+        <option value="Facebook">Facebook</option>
+        <option value="Gmail">Gmail</option>
+        <option value="Both">Both</option>
+      </select>
+
+      <label>হ্যাক হওয়া অ্যাকাউন্টের ইউজারনেম / ইমেইল / Facebook প্রোফাইল লিঙ্ক <span class="small">(required)</span></label>
+      <input type="text" id="hackedId" required />
+
+      <label>হ্যাক হয়েছিল (approximate date)</label>
+      <input type="date" id="hackDate" />
+
+      <label>সমস্যার বর্ণনা</label>
+      <textarea id="desc" rows="4" placeholder="কীভাবে জানলা, কোন নোটিফিকেশন পেলে ইত্যাদি"></textarea>
+
+      <label>প্রমাণ (স্ক্রিনশট/নোটিফিকেশন) (optional)</label>
+      <input type="file" id="evidence" accept="image/*,.pdf" />
+
+      <label style="margin-top:12px;">
+        <input type="checkbox" id="declaration" required />
+        আমি ঘোষণা করছি যে আমি উল্লিখিত অ্যাকাউন্টের প্রকৃত মালিক, এবং আমি রিকভারি-এর জন্য আপনাকে তথ্য শেয়ার করছি।
+      </label>
+
+      <button type="submit">আবেদন পাঠাও</button>
+      <p id="status" class="note"></p>
+    </form>
+
+    <p class="note">Developer note: replace <code>GAS_WEB_APP_URL</code> in the script with your deployed Apps Script web app URL.</p>
+  </div>
+
+<script>
+const GAS_URL = "GAS_WEB_APP_URL"; // <-- এটা Apps Script ডেপ্লয় করার পর এখানে পেস্ট করো
+
+document.getElementById('recoverForm').addEventListener('submit', async (ev) => {
+  ev.preventDefault();
+  const statusEl = document.getElementById('status');
+  statusEl.textContent = "পাঠানো হচ্ছে...";
+
+  const fullName = document.getElementById('fullName').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const contactEmail = document.getElementById('contactEmail').value.trim();
+  const accountType = document.getElementById('accountType').value;
+  const hackedId = document.getElementById('hackedId').value.trim();
+  const hackDate = document.getElementById('hackDate').value;
+  const desc = document.getElementById('desc').value.trim();
+  const declaration = document.getElementById('declaration').checked;
+
+  if(!declaration){ statusEl.textContent = "প্রথমেই ঘোষণায় টিক দাও।"; return; }
+
+  // File to base64
+  const fileInput = document.getElementById('evidence');
+  let fileObj = null;
+  if(fileInput.files.length > 0){
+    const f = fileInput.files[0];
+    const arrBuf = await f.arrayBuffer();
+    const b64 = arrayBufferToBase64(arrBuf);
+    fileObj = { name: f.name, type: f.type || "application/octet-stream", base64: b64 };
+  }
+
+  const payload = {
+    timestamp: new Date().toISOString(),
+    fullName, phone, contactEmail, accountType, hackedId, hackDate, desc, fileObj
+  };
+
+  try{
+    const res = await fetch(GAS_URL, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(payload),
+      mode: 'cors'
+    });
+    const txt = await res.json();
+    if(txt && txt.status === 'ok'){
+      statusEl.textContent = "ঠিক আছে। আবেদন পাওয়া গেছে — আমরা যোগাযোগ করব।";
+      document.getElementById('recoverForm').reset();
+    } else {
+      statusEl.textContent = "কিছুতে সমস্যা হয়েছে: " + (txt.message || JSON.stringify(txt));
+    }
+  } catch(err){
+    console.error(err);
+    statusEl.textContent = "পাঠাতে সমস্যা হয়েছে — দেখো Console।";
+  }
+});
+
+function arrayBufferToBase64(buffer) {
+  let binary = '';
+  const bytes = new Uint8Array(buffer);
+  const len = bytes.byteLength;
+  for (let i = 0; i < len; i++) binary += String.fromCharCode(bytes[i]);
+  return btoa(binary);
+}
+</script>
 </body>
 </html>
